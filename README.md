@@ -1,1 +1,1 @@
-# CP
+# CP Repositorio para los archivos de Programación Competitiva.
