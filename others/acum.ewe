@@ -1,0 +1,34 @@
+start:
+	readInt(a)
+	readInt(b)
+	readInt(c)
+	readInt(d)
+	one := 1
+	count := 0
+	acum := 0
+	mult := c * d
+	#ABS(a-b)
+	dif := a - b
+	if a > b then goto endif
+	#else
+	  dif := b - a
+endif:
+c:
+	if acum > mult then goto endc
+	#else
+	  count := count + one
+	  acum := acum + dif
+	  goto c
+endc:
+	writeInt(count)
+end: halt
+
+equ a M[0]
+equ b M[1]
+equ c M[2]
+equ d M[3]
+equ mult M[4]
+equ dif M[5]
+equ count M[6]
+equ one M[7]
+equ acum M[8]
