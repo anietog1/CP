@@ -2,7 +2,7 @@
 #include <utility>
 #include <vector>
 #include <queue>
-
+//Better dense
 using namespace std;
 #define MAXN 100
 #define pii pair<int,int>
