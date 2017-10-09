@@ -1,0 +1,10 @@
+for team 11:
+   RPC-team1000634
+pass:
+   
+url:
+   http://redprogramacioncompetitiva.com/contests/2017/01/
+problemset:
+   http://redprogramacioncompetitiva.com/contests/2017/01/problemset.pdf
+D -> AC
+G -> TLE
