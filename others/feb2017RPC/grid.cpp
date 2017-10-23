@@ -1,41 +1,51 @@
 #include <cstdio>
+#include <queue>
 
 using namespace std;
 #define MAXN 505
-#define INF 1 << 30
 
 int grid[MAXN][MAXN];
 int moves[MAXN][MAXN];
 int m, n;
 
-void move(int i, int j, int s){
-  if(i < 0 || j < 0 || i >= m || j >= n)
-    return;
-  
-  if(s < moves[i][j]){
-    moves[i][j] = ++s;//En los moves, suma de una a los steps
+struct movement{
+  int i, j, s;
+  movement(int i, int j, int s)
+    :i(i),j(j),s(s){}
+};
+
+void move(){
+  queue<movement> q;
+  q.push( movement(0,0,0) );
+
+  while(!q.empty() && moves[m - 1][n - 1] == 0){
+    movement curr = q.front();
+    q.pop();
+
+    int i = curr.i, j = curr.j, s = curr.s;
+    if( i < 0 || j < 0 || i >= m || j >= n)
+      continue;
+    
     int k = grid[i][j];
 
-    if(k != 0){
-      move(i + k, j, s);
-      move(i, j + k, s);
-      move(i - k, j, s);
-      move(i, j - k, s);
+    if(moves[i][j] == 0){
+      //      printf(" %d, %d, %d\n", i, j, s);
+      moves[i][j] = s++;
+      
+      if(k == 0)
+	continue;
+      
+      q.push( movement(i + k, j, s) );
+      q.push( movement(i, j + k, s) );
+      q.push( movement(i - k, j, s) );
+      q.push( movement(i, j - k, s) );
     }
   }
-}
-
-void init(int m, int n){
-  for(int i=0; i < m; ++i)
-    for(int j=0; j < n; ++j)
-      moves[i][j] = INF;
 }
 
 int main(){
   scanf("%d %d", &m, &n);
   char k;
-
-  init(m, n);
   
   for(int i = 0; i < m; ++i)
     for(int j = 0; j < n; ++j){
@@ -43,10 +53,10 @@ int main(){
       grid[i][j] = (k - '0');
     }
 
-  move(0,0,0);
+  move();
   
-  if(moves[m-1][n-1] < INF){
-    printf("%d\n", moves[m-1][n-1] - 1);
+  if( ((m == 1) && (n == 1)) || moves[m-1][n-1] != 0){
+    printf("%d\n", moves[m-1][n-1]);
   }else{
     printf("IMPOSSIBLE\n");
   }
