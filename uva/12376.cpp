@@ -44,6 +44,7 @@ int main(){
       g[u].push_back(v);
     }
 
-    cout << "Case " << i << ": " << max(0) << " " << endNode << endl;
+    int ans = max(0);
+    cout << "Case " << i << ": " << ans << " " << endNode << endl;
   }
 }
