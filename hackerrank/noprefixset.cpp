@@ -6,7 +6,9 @@ using namespace std;
 
 struct node {
   node* children[MAXN];
+  bool endOfWord;
   node(){
+    endOfWord = false;
     for(int i=0;i<MAXN;++i)
       children[i] = NULL;
   }
@@ -19,14 +21,22 @@ bool insert(const string& s){
 
   for(int i=0;i<s.length();++i){
     char curr = s[i] - 'a';
-
-    if(tourist->children[curr] != NULL)
-      return false;
-
-    tourist->children[curr] = new node;
+    
+    if(tourist->children[curr] == NULL)
+      tourist->children[curr] = new node;
+    
     tourist = tourist->children[curr];
-  }
 
+    if(tourist->endOfWord)
+      return false;
+  }
+  
+  tourist->endOfWord = true;
+
+  for(int i=0;i<MAXN;++i)
+    if(tourist->children[i] != NULL)
+      return false;
+  
   return true;
 }
 
@@ -40,7 +50,7 @@ int main(){
     cin >> s;
     
     if(!insert(s))
-      break;
+      isGood = false;
   }
 
   if(isGood)
