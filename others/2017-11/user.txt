@@ -1,0 +1,16 @@
+RPC-team1000486
+11
+
+urls:
+	http://redprogramacioncompetitiva.com/contests/2017/11/problemset.pdf
+	http://redprogramacioncompetitiva.com/contests/2017/11/index.php
+
+a: AC
+b:
+c:
+d:
+e:
+f:
+g:
+h:
+i:

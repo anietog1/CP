@@ -7,6 +7,8 @@ using namespace std;
 
 struct student{
   string last, name;
+
+  student(){}
   
   student(string name, string last)
     :name(name),last(last){}
@@ -24,7 +26,7 @@ struct student{
     if(c > 0)
       return false;
 
-    return true;
+    return false;
   }
 
   void print(){
@@ -36,7 +38,6 @@ int main(){
   int n;
   string name, last;
   vector<student> students;
-  students.reserve(100);
   
   cin >> n;
   while(n){
@@ -49,4 +50,6 @@ int main(){
   sort(students.begin(), students.end());
   for(int i=0; i < students.size(); ++i)
     students[i].print();
+
+  return 0;
 }

@@ -6,5 +6,12 @@ url:
    http://redprogramacioncompetitiva.com/contests/2017/01/
 problemset:
    http://redprogramacioncompetitiva.com/contests/2017/01/problemset.pdf
+A ->
+B ->
+C -> CE
 D -> AC
+E ->
+F ->
 G -> TLE
+H ->
+I ->
