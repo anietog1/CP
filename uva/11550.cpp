@@ -1,7 +1,6 @@
-//https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=&problem=2545&mosmsg=Submission+received+with+ID+20424478
 #include <iostream>
 
-//puros errores pendejos...
+//just stupid mistakes...
 
 using namespace std;
 bool g[10][100];

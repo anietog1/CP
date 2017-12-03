@@ -1,10 +1,10 @@
-//https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=754&page=show_problem&problem=3664
 #include <iostream>
 #include <string>
 #include <algorithm>
 
 using namespace std;
-#define MAXN 5005
+#define MAXN 1010
+
 string currstr,  suffixes[MAXN];
 int T;
 
@@ -31,16 +31,29 @@ int main(){
 
     sort(suffixes, suffixes + currstr.length());
     
-    int maxlen = 0;
-    
+    string maxstr;
+    int repetitions = 0;
+
     for(int i=0;i<currstr.length()-1;++i){
       string &str1 = suffixes[i], &str2 = suffixes[i+1];
       int commonlength = maxlencommonprefix(str1, str2);
 
-      if(commonlength > maxlen)
-	maxlen = commonlength;
+      if(commonlength > maxstr.length()){
+	maxstr = str1.substr(0, commonlength);
+	repetitions = 1;
+      }else{
+	commonlength = maxlencommonprefix(str1, maxstr);
+	if(commonlength == maxstr.length())
+	  repetitions += 1;
+      }
     }
 
-    cout << maxlen << endl;
+    if(maxlencommonprefix(suffixes[currstr.length() - 1],maxstr) == maxstr.length())
+      repetitions += 1;
+    
+    if(maxstr != "")
+      cout << maxstr << " " << repetitions << endl;
+    else
+      cout << "No repetitions found!" << endl;
   }
 }

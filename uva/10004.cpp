@@ -1,4 +1,3 @@
-//https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=669&page=show_problem&problem=945
 #include <iostream>
 #include <vector>
 #include <queue>

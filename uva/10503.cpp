@@ -1,4 +1,3 @@
-//https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=9
 #include <iostream>
 #include <functional>
 #include <algorithm>

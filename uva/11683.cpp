@@ -1,4 +1,3 @@
-//https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2730
 //first approach was TLE, complexity O(h*w)
 //second approach tried with O(w),
 //learned from https://tausiq.wordpress.com/2011/04/22/uva-11683-laser-sculpture/ it's possible to solve with stack

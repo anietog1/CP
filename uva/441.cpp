@@ -1,4 +1,3 @@
-//https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=642&page=show_problem&problem=382
 #include <iostream>
 
 using namespace std;
