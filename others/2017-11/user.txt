@@ -1,4 +1,4 @@
-RPC-team1000486
+RPC-team1000505
 11
 
 urls:
@@ -6,7 +6,7 @@ urls:
 	http://redprogramacioncompetitiva.com/contests/2017/11/index.php
 
 a: AC
-b:
+b: WA
 c:
 d:
 e:
