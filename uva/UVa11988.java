@@ -1,8 +1,7 @@
-//https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3139
 import java.util.*;
 import java.io.*;
 
-public class BrokenKeyboard{
+public class UVa11988{
     public static LinkedList<StringBuilder> brokenKeyboard(String input) {
         LinkedList<StringBuilder> list = new LinkedList<>();
 
