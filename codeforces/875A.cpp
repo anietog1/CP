@@ -19,7 +19,7 @@ int main(){
       sum += x%10;
       x /= 10;
     }
-
+    
     if(sum == n)
       ans.push_back(i);
   }

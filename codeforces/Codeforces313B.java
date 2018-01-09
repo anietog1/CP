@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class Illia{
+public class Codeforces313B {
     public static void codeForcesChallenge(){
         Scanner sc = new Scanner(System.in);
 
