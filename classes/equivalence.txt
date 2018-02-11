@@ -1,0 +1,9 @@
+equivalence problems are reduced to finding the minimun value
+of the equivalence:
+
+for relation R defined as a R b <-> a % 5 = b % 5
+
+finding for 5 R 10
+that 0 is for 5 and 0 is for 10
+
+You can rel 0 R 0 instead of 5 R 10
