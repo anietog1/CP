@@ -1,50 +1,42 @@
-#include <iostream>
-
-//just stupid mistakes...
+#include <bits/stdc++.h>
 
 using namespace std;
-bool g[10][100];
-int t, n, m;
-
-bool good(){
-  bool con[10][10] = {};
-  
-  for(int j=0;j<m;++j){
-    int u, v, count = 0;
-    
-    for(int i=0;i<n;++i){
-      if(g[i][j]){
-	if(!count)
-	  u = i;
-	else
-	  v = i;
-	
-	++count;
-      }
-    }
-
-    if(count != 2)
-      return false;
-
-    if(con[u][v])
-      return false;
-    
-    con[u][v] = con[v][u] = true;
-  }
-
-  return true;
-}
 
 int main(){
+  int t;
   cin >> t;
-  while(cin >> n >> m){
+  while(t--){
+    int n, m;
+    cin >> n >> m;
+
+    int incmatrix[n][m], adjmatrix[n][n] = {};
+    
     for(int i=0;i<n;++i)
       for(int j=0;j<m;++j)
-	cin >> g[i][j];
+	cin >> incmatrix[i][j];
     
-    if(good())
+    bool valid = true;
+    for(int j=0;j<m && valid;++j){
+      vector<int> incidence;
+      
+      for(int i=0;i<n;++i)
+	if(incmatrix[i][j])
+	  incidence.push_back(i);
+      
+      if(incidence.size() != 2)
+	valid = false;
+      else {
+	int u = incidence[0], v = incidence[1];
+	if(adjmatrix[u][v] || adjmatrix[v][u])
+	  valid = false;
+	else
+	  adjmatrix[u][v] = adjmatrix[v][u] = true;	
+      }
+    }
+    
+    if(valid)
       cout << "Yes" << endl;
     else
-      cout << "No"<< endl;
+      cout << "No" << endl;
   }
 }
