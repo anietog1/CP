@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class UVa11988{
+public class uva11988{
     public static LinkedList<StringBuilder> brokenKeyboard(String input) {
         LinkedList<StringBuilder> list = new LinkedList<>();
 
