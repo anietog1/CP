@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class codeforces313B {
+public class B {
     public static void codeForcesChallenge(){
         Scanner sc = new Scanner(System.in);
 
