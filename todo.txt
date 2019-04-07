@@ -20,11 +20,24 @@
 *ALGORITHM:* {
  *UVa:* {
    * 11990 # Inversions
+   * 10319 # SAT
  }
+}
+
+*MATHEMATICS:* {
+  *UVa:* {
+    * 10210 # Modulo
+    * 10176 # Modulo
+  }
 }
 
 *GEOMETRY:* {
   *UVa:* {
-    
+    # pp. 269-282
+    * 10927
+    * 10263
+    * 00920
+    * 10589
+    * 11834
   }
 }
