@@ -26,8 +26,6 @@
 
 *MATHEMATICS:* {
   *UVa:* {
-    * 10210 # Modulo
-    * 10176 # Modulo
   }
 }
 
