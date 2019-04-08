@@ -26,15 +26,20 @@
 
 *MATHEMATICS:* {
   *UVa:* {
+    # pp. 226 - 228
+    * 10368 # Decision tree
+    * 847
   }
 }
 
 *GEOMETRY:* {
   *UVa:* {
     # pp. 269-282
-    * 10927
-    * 10263
+    # points and lines:
     * 00920
+    * 10263
+    * 10927
+
     * 10589
     * 11834
   }
