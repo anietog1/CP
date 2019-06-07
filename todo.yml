@@ -1,0 +1,48 @@
+- Dynamic Programming
+ - UVa
+   - 10667 # 2D sum
+   - 11790 # LIS
+   - 10616 # Knapsack
+   - 10306 # Coin Change
+   - 10496 # TSP
+   - 10721 # ? Bar codes
+
+- Strings
+  - UVa
+    - 11475 # Palindromes, KMP
+    - Carrol's scrabble # Edit distance
+
+- Algorithms
+  - UVa
+    - 11990 # Inversions
+    - 10319 # SAT
+
+- Mathematics
+  - UVa
+    # pp. 226 - 228
+    - 10368 # Decision tree
+    - 847
+
+- Geometry
+  - UVa
+    # pp. 269-282
+    - 10589
+    - 11834
+
+- Game Theory
+  - UVa
+    - 10111
+    - 11311
+    - 11489
+    - 12293
+    - 12469
+
+- Number Theory
+  - UVa
+    # Cycle finding and probabilities
+    - 00350
+    - 11634
+    - 11500
+    - 10759
+    - 12464
+    - 11053
