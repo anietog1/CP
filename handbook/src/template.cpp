@@ -1,40 +1,42 @@
-#include <algorithm>
-#include <iostream>
-#include <iterator>
-#include <numeric>
-#include <sstream>
-#include <fstream>
-#include <cassert>
-#include <climits>
-#include <cstdlib>
-#include <cstring>
-#include <string>
-#include <cstdio>
-#include <vector>
-#include <cmath>
-#include <queue>
-#include <deque>
-#include <stack>
-#include <list>
-#include <map>
-#include <set>
-#include <bitset>
-
-#define D(x) cout << "DEBUG: " << #x " = " << x << endl
+#include <bits/stdc++.h>
 
 using namespace std;
+#define d(x) cout << "[DEBUG] " << #x " = " << x << endl
+
+#define forn(i, n) for(int i = 0; i < n; ++i)
+#define fore(i, j, k) for(int i = j; i <= k; ++i)
+
+typedef long long ll;
+typedef unsigned long long ull;
+typedef pair<int, int> pii;
+typedef pair<ll, ll> pll;
+typedef vector<int> vi;
+typedef vector<pii> vii;
 
 const double EPS = 1e-9;
 const double PI = acos(-1.0);
+const ll INF = LONG_LONG_MAX;
 
-template <class T> string toStr(const T &x)
-{ stringstream s; s << x; return s.str(); }
-
-template <class T> int toInt(const T &x)
-{ stringstream s; s << x; int r; s >> r; return r; }
-
-int
-main() {
-
-  return 0;
+int main() {
+  //fast i/o: do not combine iostream with stdio
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr); cout.tie(nullptr);
+  //input replacements
+  freopen("input.txt", "r", stdin);
+  freopen("output.txt", "w", stdout);
+  //some tricks
+  priority_queue<int, vector<int>, greater<int>> q;//biggest first. replace int with type
+  string str = to_string(10);
+  int x = stoi("123");
+  float f = stof("1.112");
+  //mems
+  int src[10], dst[10];
+  memset(src, 0, 10 * sizeof(int));
+  memcpy(dst, src, 10 * sizeof(int));
+  //sorts
+  vi vec;
+  sort(src, src + 10);
+  sort(vec.rbegin(), vec.rend());
+  //traversing
+  for(auto x : vec);
 }
