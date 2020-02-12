@@ -383,6 +383,10 @@ Complejidad: $O(n \times W)$ donde $n$ es el número de objetos y $W$ es la capa
     Complejidad: $O(n)$ donde $n$ es el tamaño de \verb|haystack|.\\
     \source{./src/kmp.cpp}
 
+    \subsection{Z}
+    This algorithm finds all occurrences of a pattern in a text in linear time. Let length of text be \verb|n| and of pattern be \verb|m|, then total time taken is $O(m + n)$ with linear space complexity. Now we can see that both time and space complexity is same as KMP algorithm but this algorithm is Simpler to understand.\\
+    \source{./src/z.cpp}
+
   \subsection{Algoritmo de Booth - Lexicographically minimal string rotation}
     Encuentra la rotación de un string que contiene el menor orden lexicográfico de todas las rotaciones posibles. Por ejemplo, la menor rotación lexicográfica de \texttt{bbaaccaadd} sería \texttt{aaccaaddbb}, y de \texttt{abcdeabcdea} sería \texttt{aabcdeabcde}. \\
     El algoritmo concatena el string a sí mismo y computa una tabla basándose en el algoritmo de KMP.\\

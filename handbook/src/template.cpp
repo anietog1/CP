@@ -25,7 +25,8 @@ int main() {
   freopen("input.txt", "r", stdin);
   freopen("output.txt", "w", stdout);
   //some tricks
-  priority_queue<int, vector<int>, greater<int>> q;//biggest first. replace int with type
+  //biggest first. replace int with type
+  priority_queue<int, vector<int>, greater<int>> q;
   string str = to_string(10);
   int x = stoi("123");
   float f = stof("1.112");
@@ -36,7 +37,7 @@ int main() {
   //sorts
   vi vec;
   sort(src, src + 10);
-  sort(vec.rbegin(), vec.rend());
+  sort(vec.rbegin(), vec.rend());//reverse order
   //traversing
   for(auto x : vec);
 }
