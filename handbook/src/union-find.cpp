@@ -1,21 +1,41 @@
-const int MAXN = 100005;
-int p[MAXN];// El padre del conjunto al que pertenece cada nodo
+int parent[MAXN], rank[MAXN], size[MAXN];
 
-// Inicializar cada conjunto como unitario
-void initialize(int n){
-  for (int i = 0; i <= n; ++i) p[i] = i; 
+void init() {
+  for(int i = 0; i < MAXN; ++i)
+    make_set(i);
 }
 
-// Encontrar el padre del conjunto al que pertenece u
-int find(int u){
-  if (p[u] == u) return u;
-  return p[u] = find(p[u]);
+void make_set(int v) {
+  parent[v] = v;
+  rank[v] = 0;
+  size[v] = 1;
 }
 
-// Unir los conjunto a los que pertenecen u y v
-void join(int u, int v){
-  int a = find(u);
-  int b = find(v);
-  if (a == b) return;
-  p[a] = b;  
+int find_set(int v) {
+  if (v == parent[v])
+    return v;
+  return parent[v] = find_set(parent[v]);
+}
+
+void union_sets_by_rank(int a, int b) {
+  a = find_set(a);
+  b = find_set(b);
+  if(a != b) {
+    if(rank[a] < rank[b])
+      swap(a, b);
+    parent[b] = a;
+    if(rank[a] == rank[b])
+      rank[a]++;
+  }
+}
+
+void union_sets_by_size(int a, int b) {
+  a = find_set(a);
+  b = find_set(b);
+  if(a != b) {
+    if(size[a] < size[b])
+      swap(a, b);
+    parent[b] = a;
+    size[a] += size[b];
+  }
 }
